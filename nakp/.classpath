@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="resources"/>
 	<classpathentry kind="src" path="webapp"/>
+	<classpathentry kind="src" path="test"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry exported="true" kind="lib" path="/Users/jonastebbe/.gradle/caches/artifacts-26/filestore/org.wicketstuff/wicketstuff-annotation/6.11.0/jar/adae60e500074b0bdc5a4486a10f69fb230999f9/wicketstuff-annotation-6.11.0.jar" sourcepath="/Users/jonastebbe/.gradle/caches/artifacts-26/filestore/org.wicketstuff/wicketstuff-annotation/6.11.0/source/94ba14d37d21425c44ced78f5153aadf33e66723/wicketstuff-annotation-6.11.0-sources.jar"/>
 	<classpathentry exported="true" kind="lib" path="/Users/jonastebbe/.gradle/caches/artifacts-26/filestore/org.bindgen.wicket/bindgen-wicket/1.0/jar/bae195b5f0ada10f28ef8d65cb69e779518d4111/bindgen-wicket-1.0.jar" sourcepath="/Users/jonastebbe/.gradle/caches/artifacts-26/filestore/org.bindgen.wicket/bindgen-wicket/1.0/source/373e0fbe76d23b203693d51be5983b190737c459/bindgen-wicket-1.0-sources.jar"/>
