@@ -5,6 +5,10 @@
 	version="3.0">
 
 	<module-name>Shop</module-name>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:/spring/spring.xml</param-value>
+	</context-param>
 	<filter>
 		<filter-name>WicketFilter</filter-name>
 		<filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>

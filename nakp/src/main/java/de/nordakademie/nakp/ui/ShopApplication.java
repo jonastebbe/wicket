@@ -7,7 +7,7 @@ public class ShopApplication extends WebApplication {
 
 	@Override
 	public Class<? extends Page> getHomePage() {
-		return null;
+		return HomePage.class;
 	}
 
 }
