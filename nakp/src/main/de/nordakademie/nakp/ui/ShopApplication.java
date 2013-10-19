@@ -15,7 +15,10 @@ public class ShopApplication extends WebApplication {
 	@Override
 	protected void init() {
 		super.init();
-		new AnnotatedMountScanner().scanPackage("main.de.nordakademie.nakp.ui").mount(this);
-		getComponentInstantiationListeners().add(new SpringComponentInjector(this));
+		new AnnotatedMountScanner().scanPackage("main.de.nordakademie.nakp.ui")
+				.mount(this);
+		getComponentInstantiationListeners().add(
+				new SpringComponentInjector(this));
+
 	}
 }
