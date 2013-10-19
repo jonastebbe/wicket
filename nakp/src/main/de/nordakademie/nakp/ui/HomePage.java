@@ -1,4 +1,4 @@
-package main.java.de.nordakademie.nakp.ui;
+package main.de.nordakademie.nakp.ui;
 
 import org.apache.wicket.markup.html.WebPage;
 
