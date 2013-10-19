@@ -25,7 +25,7 @@ public class MongoProductDAO implements ProductDAO {
 				.find();
 		while (cursor.hasNext()) {
 			final DBObject document = cursor.next();
-			products.add(new Product((String) document.get("id")));
+			products.add(new Product((String) document.get("_id")));
 		}
 		return products;
 	}
