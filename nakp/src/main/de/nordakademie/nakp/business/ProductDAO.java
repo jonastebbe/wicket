@@ -8,4 +8,6 @@ public interface ProductDAO {
 	public List<Product> findAll();
 
 	public void insert(BasicDBObject document);
+
+	public void remove(String substring);
 }

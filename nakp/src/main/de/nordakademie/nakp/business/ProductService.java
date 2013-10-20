@@ -8,4 +8,6 @@ public interface ProductService {
 	List<Product> findAll();
 
 	void insert(BasicDBObject document);
+
+	void remove(String substring);
 }

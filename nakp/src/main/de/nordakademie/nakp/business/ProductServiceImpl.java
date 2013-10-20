@@ -22,4 +22,9 @@ public class ProductServiceImpl implements ProductService {
 		productDAO.insert(document);
 	}
 
+	@Override
+	public void remove(String substring) {
+		productDAO.remove(substring);
+	}
+
 }

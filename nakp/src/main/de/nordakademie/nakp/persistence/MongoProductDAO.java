@@ -39,4 +39,11 @@ public class MongoProductDAO implements ProductDAO {
 
 	}
 
+	@Override
+	public void remove(String substring) {
+		final DBObject removeObject = new BasicDBObject();
+		removeObject.put("_id", substring);
+		mongodb.getObject().getCollection("product").remove(removeObject);
+	}
+
 }

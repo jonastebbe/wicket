@@ -9,20 +9,24 @@
 			</h1>
 		</div>
 		<div class="col-sm-6 col-md-3" wicket:id="productListView">
-			<div class="thumbnail">
-				<img data-src="holder.js/300x200" alt="...">
-				<div class="caption">
-					<h3 wicket:id="productName"></h3>
-					<h4>
-						<span class="label label-default"> <i wicket:id="price"></i> $
-						</span>
-					</h4>
-					<p wicket:id="description"></p>
-					<p>
-						<a href="#" class="btn btn-primary">Delete product</a>
-					</p>
+			<form class="form" wicket:id="removeForm">
+				<div class="thumbnail">
+					<img data-src="holder.js/300x200" alt="...">
+					<div class="caption">
+						<h3 wicket:id="productName"></h3>
+						<h4>
+							<span class="label label-default"> <i wicket:id="price"></i>
+								$
+							</span>
+						</h4>
+						<p wicket:id="description"></p>
+						<p>
+							<button wicket:id="removeButton" type="submit"
+								class="btn btn-success">Delete product</button>
+						</p>
+					</div>
 				</div>
-			</div>
+			</form>
 		</div>
 	</wicket:panel>
 </body>
