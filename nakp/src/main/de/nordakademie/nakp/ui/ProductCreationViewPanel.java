@@ -4,9 +4,15 @@ import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
-import org.apache.wicket.request.mapper.parameter.PageParameters;
+import org.apache.wicket.spring.injection.annot.SpringBean;
+
+import main.de.nordakademie.nakp.business.ProductService;
+
+import com.mongodb.BasicDBObject;
 
 public class ProductCreationViewPanel extends Panel {
+	@SpringBean
+	private ProductService productService;
 
 	public ProductCreationViewPanel(String id) {
 		super(id);
@@ -27,12 +33,11 @@ public class ProductCreationViewPanel extends Panel {
 				final String descriptionValue = description.getModelObject();
 				final String priceValue = price.getModelObject();
 
-				PageParameters pageParameters = new PageParameters();
-				pageParameters.add("productName", productNameValue);
-				pageParameters.add("description", descriptionValue);
-				pageParameters.add("price", priceValue);
-				setResponsePage(SuccessPage.class, pageParameters);
-
+				BasicDBObject document = new BasicDBObject();
+				document.put("_id", productNameValue);
+				document.put("description", descriptionValue);
+				document.put("price", priceValue);
+				productService.insert(document);
 			}
 
 		};
