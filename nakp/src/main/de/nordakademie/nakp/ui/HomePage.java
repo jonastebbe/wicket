@@ -7,6 +7,8 @@ import org.apache.wicket.markup.html.WebPage;
 public class HomePage extends WebPage {
 
 	public HomePage() {
+		add(new NavbarViewPanel("navbarViewPanel"));
+		add(new ProductCreationViewPanel("productCreationViewPanel"));
 		add(new ProductListViewPanel("productListViewPanel"));
 	}
 
