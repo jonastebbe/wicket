@@ -3,14 +3,21 @@
 	xmlns="http://www.w3.org/1999/xhtml">
 <body>
 	<wicket:panel>
+		<div class="page-header">
+			<h1>
+				Productlist <small>All available products</small>
+			</h1>
+		</div>
 		<div class="col-sm-6 col-md-3" wicket:id="productListView">
 			<div class="thumbnail">
 				<img data-src="holder.js/300x200" alt="...">
 				<div class="caption">
 					<h3 wicket:id="productName"></h3>
-					<p>...</p>
+					<p wicket:id="price"></p>
+					EUR
+					<p wicket:id="description"></p>
 					<p>
-						<a href="#" class="btn btn-primary">Produkt löschen</a>
+						<a href="#" class="btn btn-primary">Delete product</a>
 					</p>
 				</div>
 			</div>

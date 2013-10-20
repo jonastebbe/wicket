@@ -22,8 +22,9 @@ public class ProductListViewPanel extends Panel {
 
 			@Override
 			protected void populateItem(ListItem<Product> item) {
-				item.add(new Label("productName", item.getModelObject()
-						.getName()));
+				item.add(new Label("productName", item.getModelObject().getName()));
+				item.add(new Label("description", item.getModelObject().getDescription()));
+				item.add(new Label("price", item.getModelObject().getPrice()));
 			}
 		});
 	}

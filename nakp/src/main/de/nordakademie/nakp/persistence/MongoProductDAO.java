@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.mongodb.BasicDBObject;
 import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
 
@@ -25,9 +26,17 @@ public class MongoProductDAO implements ProductDAO {
 				.find();
 		while (cursor.hasNext()) {
 			final DBObject document = cursor.next();
-			products.add(new Product((String) document.get("_id")));
+			products.add(new Product((String) document.get("_id"),
+					(String) document.get("description"), (String) document
+							.get("price")));
 		}
 		return products;
+	}
+
+	@Override
+	public void insert(BasicDBObject document) {
+		mongodb.getObject().getCollection("product").insert(document);
+
 	}
 
 }
